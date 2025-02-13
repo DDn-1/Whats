@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quieres ser mi 14 y 15 de Febrero?</title>
+    <style>
+        .container {
+            text-align: center;
+            font-size: 12px;
+        }
+        #gif-container {
+            width: 300px; /* Ajusta el tamaño aquí */
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="gif-container" class="tenor-gif-embed" data-postid="15623878229088898947" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/peach-goma-water-slide-gif-15623878229088898947">Peach Goma Water Slide Sticker</a>from <a href="https://tenor.com/search/peach+goma-stickers">Peach Goma Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>XD, Lo sabía mi gatittaaa!!!</h1>
+        <h1>Gracias por aceptar, te amooo muchísimo!! </h1>
+    </div>
+
+    <script>
+        const gifs = [
+            "11000679121036284802", // ID del primer GIF de Tenor
+            "12274813988778769787",
+            "15843339",
+            "6658566924546534587",
+            "9525027507847100743",
+            "8549809606262360308",
+            "9089093539531849085",
+            "2073275963562890658",
+            "26052792",
+            "21081551",
+            "3407621490621176950",
+            "15396779153844380133"
+        ];
+
+        let index = 0;
+        
+        function cambiarGif() {
+            const gifContainer = document.getElementById("gif-container");
+            gifContainer.innerHTML = ""; // Limpia el contenido anterior
+
+            const tenorDiv = document.createElement("div");
+            tenorDiv.className = "tenor-gif-embed";
+            tenorDiv.setAttribute("data-postid", gifs[index]);
+            tenorDiv.setAttribute("data-share-method", "host");
+            tenorDiv.setAttribute("data-aspect-ratio", "1");
+            tenorDiv.setAttribute("data-width", "300px"); // Tamaño reducido
+
+            gifContainer.appendChild(tenorDiv);
+
+            const script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://tenor.com/embed.js";
+            script.async = true;
+            document.body.appendChild(script);
+
+            index = (index + 1) % gifs.length;
+        }
+
+        setInterval(cambiarGif, 2000);
+    </script>
+
+</body>
+</html>

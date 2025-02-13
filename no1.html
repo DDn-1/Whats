@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piensatelo...</title>
+    <style>
+        .container {
+            text-align: center;
+            font-size: 18px;
+        }
+        #gif-container {
+            width: 300px; /* Ajusta el tamaño aquí */
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="6067233670435507097" data-share-method="host" data-aspect-ratio="1.22857" data-width="100%"><a href="https://tenor.com/view/mochipeachcat-mochi-cat-gatitos-amor-gif-6067233670435507097">Mochipeachcat Mochi Cat Sticker</a>from <a href="https://tenor.com/search/mochipeachcat-stickers">Mochipeachcat Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1 id="mensaje">¿Estas Segura? Piensalo bien 😥</h1>
+        <script>
+            const mensajes = [
+                "Segurísima?",
+                "Estás completamente segura?",
+                "No te arrepentirás?",
+                "Pero estás segura?",
+                "No hay vuelta atrás",
+                "No hay devoluciones",
+                "No hay garantías",
+                "No hay reembolsos",
+                "No hay cambios",
+                "No hay nada",
+                "No hay",
+                "Segura?",
+                "Segurísima?"
+            ];
+    
+            let index = 0;
+            function cambiarMensaje() {
+                document.getElementById("mensaje").textContent = mensajes[index];
+                index = (index + 1) % mensajes.length; // Reinicia al llegar al final
+            }
+    
+            setInterval(cambiarMensaje, 1000); // Cambia cada 2 segundos
+        </script>
+        <div class="btn">
+            <a href="si.html">SI</a>
+            <a href="no2.html">NO</a>
+        </div>
+    </div>
+</body>
+</html>

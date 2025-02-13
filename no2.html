@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quieres ser mi 14 y 15 de Febrero?</title>
+    <style>
+        .container {
+            text-align: center;
+            font-size: 18px;
+        }
+        #gif-container {
+            width: 300px; /* Ajusta el tamaño aquí */
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="gif-container" class="tenor-gif-embed" data-postid="15434464038626925308" data-share-method="host" data-aspect-ratio="1.10667" data-width="100%"><a href="https://tenor.com/view/peach-and-goma-love-peach-cat-cute-peach-cat-thinking-of-you-gif-15434464038626925308">Peach And Goma Love Peach Cat Cute GIF</a>from <a href="https://tenor.com/search/peach+and+goma+love-gifs">Peach And Goma Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>Tarde o temprano caerás en mi encanto, no hay escapatoria. 😈  </h1>
+        <div class="btn">
+            <a href="si.html">SI</a>
+            <a href="#" id="btn-random">NO</a>
+        </div>
+    </div>
+
+    <script>
+        const gifs = [
+            "12274813988778769787", // ID del primer GIF de Tenor
+            "15614006829967236523",
+            "15434464038626925308",
+            "9300984381784985178"
+        ];
+        
+        let index = 0;
+        
+        function cambiarGif() {
+            const gifContainer = document.getElementById("gif-container");
+            gifContainer.innerHTML = ""; // Limpia el contenido anterior
+            
+            const tenorDiv = document.createElement("div");
+            tenorDiv.className = "tenor-gif-embed";
+            tenorDiv.setAttribute("data-postid", gifs[index]);
+            tenorDiv.setAttribute("data-share-method", "host");
+            tenorDiv.setAttribute("data-aspect-ratio", "1");
+            tenorDiv.setAttribute("data-width", "300px"); // Tamaño reducido
+            
+            gifContainer.appendChild(tenorDiv);
+            
+            const script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://tenor.com/embed.js";
+            script.async = true;
+            document.body.appendChild(script);
+            
+            index = (index + 1) % gifs.length;
+        }
+        
+        setInterval(cambiarGif, 2000);
+        </script>
+<script src="script.js"></script>
+
+</body>
+</html>
